@@ -105,3 +105,7 @@ const SignUpForm = () => {
 };
 
 export default SignUpForm;
+
+export const signUpAction = () => {
+  
+}
