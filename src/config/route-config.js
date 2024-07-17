@@ -20,13 +20,13 @@ import { loginAction } from '../components/auth/LoginForm';
 import { authCheckLoader, userDataLoader } from './auth';
 import { logoutAction } from '../pages/Logout';
 
+
 // 라우터 설정
 const eventsRouter = [
   { 
     index: true, 
     element: <Events />,
     // loader: eventListLoader,
-    
   },
   { 
     path: ':eventId', 
@@ -88,9 +88,8 @@ export const router = createBrowserRouter([
       {
         path: 'events',
         element: <EventLayout />,
-        loader: authCheckLoader, // 최상위 경로
+        loader: authCheckLoader,
         children: eventsRouter
-        
       },
     ]
   },
